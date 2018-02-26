@@ -31,4 +31,11 @@ AND ((H1.grade - H2.grade) > 1);
 
 Problem #8
 
+SELECT AVG(a.count) FROM
+(SELECT count(ID1) as count
+FROM Friend f
+GROUP BY f.ID1) a;
+
+
+
 
