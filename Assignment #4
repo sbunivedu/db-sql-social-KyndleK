@@ -1,0 +1,31 @@
+Problem #1
+
+SELECT name FROM Highschooler
+WHERE ID IN(
+SELECT ID2 FROM Friend
+WHERE ID1 IN(
+SELECT ID FROM Highschooler
+WHERE name = 'Gabriel'));
+
+Problem #2
+
+SELECT name, grade
+FROM Highschooler
+WHERE ID NOT IN
+(SELECT ID1 FROM Likes UNION SELECT ID2 FROM Likes);
+
+Problem #3
+
+SELECT name, grade
+FROM Highschooler
+WHERE ID IN(
+SELECT ID2 FROM Likes 
+GROUP BY ID2 having count(ID1) > 1 );
+
+Problem #4
+
+
+
+Problem #8
+
+
