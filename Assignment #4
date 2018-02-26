@@ -24,7 +24,10 @@ GROUP BY ID2 having count(ID1) > 1 );
 
 Problem #4
 
-
+SELECT H1.name, H1.grade, H2.name, H2.grade
+FROM Highschooler H1, Highschooler H2, Likes
+WHERE (Likes.ID1 = H1.ID AND Likes.ID2 = H2.ID)
+AND ((H1.grade - H2.grade) > 1);
 
 Problem #8
 
